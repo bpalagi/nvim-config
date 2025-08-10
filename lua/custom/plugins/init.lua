@@ -30,13 +30,10 @@ return {
             only_render_image_at_cursor = false,
           },
         },
-        max_width = 60,
-        max_height = 30,
         window_overlap_clear_enabled = true,
       }
     end,
   },
-
   -- Paste image from clipboard into Markdown
   {
     'HakonHarnes/img-clip.nvim',
