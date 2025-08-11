@@ -63,6 +63,10 @@ return {
         view = {
           width = 50,
         },
+        filters = {
+          dotfiles = false,
+          git_ignored = false,
+        },
       }
       -- Set keymap to toggle NvimTree with <leader>e
       vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
