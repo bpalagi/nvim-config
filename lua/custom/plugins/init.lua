@@ -6,12 +6,14 @@ return {
   -- Markdown text styling
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    ft = { 'markdown' },
+    ft = { 'markdown', 'Avante' },
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
       'nvim-tree/nvim-web-devicons',
     },
-    opts = {},
+    opts = {
+      file_types = { 'markdown', 'Avante' },
+    },
   },
 
   -- Inline image rendering (requires Kitty graphics protocol, works in Ghostty)
@@ -71,5 +73,18 @@ return {
       -- Set keymap to toggle NvimTree with <leader>e
       vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
     end,
+  },
+  {
+    'yetone/avante.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
+      'stevearc/dressing.nvim',
+    },
+    build = 'make',
+    opts = {
+      provider = 'gemini',
+    },
   },
 }
